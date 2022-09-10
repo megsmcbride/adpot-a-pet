@@ -14,7 +14,7 @@ function App() {
       <Navigation />
 
       </Route>
-      <Route path='/:type'>
+      <Route path='/:type?'>
 
       <HomePage />
       </Route>
