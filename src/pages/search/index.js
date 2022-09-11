@@ -4,11 +4,9 @@ import { getPets } from '../../api/petfinder';
 import Pet from '../../components/pet';
 import { useLocation } from 'react-router-dom';
 
-// import useLocation here
 
 const SearchPage = () => {
 
-  // Get the search value from useLocation() here
   const search = useLocation()
 
   const queryParams = useMemo(() => { 
