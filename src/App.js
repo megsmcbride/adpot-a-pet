@@ -14,6 +14,9 @@ function App() {
             <Navigation />
           </Route>
       <Switch>
+        <Route path="/search">
+          <SearchPage />
+        </Route>
           <Route path="/:type/:id">
             <PetDetailsPage />
           </Route>
