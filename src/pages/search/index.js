@@ -7,17 +7,18 @@ import { useLocation } from 'react-router-dom';
 
 const SearchPage = () => {
 
-  const search = useLocation()
+  const { search } = useLocation()
 
   const queryParams = useMemo(() => { 
     return new URLSearchParams(search);
-  }, [search]);
+  }, [search])
+
 
   const [pets, setPets] = useState([]);
 
   useEffect(() => {
     async function getPetsData() {
-      const petNameToFind = search
+      const petNameToFind = queryParams.get('name')
       const petsData = await getPets('', petNameToFind);
 
       setPets(petsData);
