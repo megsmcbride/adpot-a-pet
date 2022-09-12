@@ -13,7 +13,7 @@ const SearchPage = () => {
     return new URLSearchParams(search);
   }, [search])
 
-
+console.log("KLASDF", queryParams)
   const [pets, setPets] = useState([]);
 
   useEffect(() => {
